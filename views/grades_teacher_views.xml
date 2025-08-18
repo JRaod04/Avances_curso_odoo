@@ -1,0 +1,40 @@
+<odoo>
+    <record id="grades_teacher_view_list" model="ir.ui.view">
+        <field name="name">grades.teacher.tree</field>
+        <field name="model">res.partner</field>
+        <field name="type">list</field> <field name="arch" type="xml">
+            <list string="Teachers">
+                <field name="complete_name"/>
+                <field name="mobile"/>
+                <field name="email"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="grades_teacher_view_form" model="ir.ui.view">
+        <field name="name">grades.teacher.form</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <form string="Teacher">
+                <sheet>
+                    <group>
+                        <field name="complete_name"/>
+                        <field name="mobile"/>
+                        <field name="email"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="grades_teacher_action" model="ir.actions.act_window">
+        <field name="name">Teachers</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_ids"
+                    eval="[(5,0,0),
+                           (0, 0, {'view_mode':'list', 'view_id': ref('grades_teacher_view_list')}),
+                           (0, 0, {'view_mode':'form', 'view_id': ref('grades_teacher_view_form')})]"/>
+    </record>
+
+</odoo>
