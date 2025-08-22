@@ -8,8 +8,10 @@
 	'depends' : ['base'],
 	'data' : [
         'security/ir.model.access.csv',
+        'views/evaluations_views.xml',
         'views/grades_course_view.xml',
         'views/grades_teacher_views.xml',
+        'views/students_views.xml',
         'views/grades_manager_menus.xml',
     ],
 	'license' : 'AGPL-3',

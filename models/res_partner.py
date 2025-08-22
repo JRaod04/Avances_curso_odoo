@@ -5,3 +5,4 @@ class ResPartner(models.Model):
 
     is_teacher = fields.Boolean(string='Is Teacher')
     is_freelancer = fields.Boolean(string='Is Freelancer')
+    is_student = fields.Boolean(string='Is Student')
